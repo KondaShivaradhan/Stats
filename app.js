@@ -3,7 +3,7 @@ var app = express();
 var path = require('path');
 app.use(express.static(path.join(__dirname, "public")));
 app.set('view engine', 'ejs');
-
+const port = 5000
 app.use(express.urlencoded({ extended: false }));
 var apex = require('./stats/apex.js')
 var r6 = require('./stats/r6.js')
@@ -30,4 +30,6 @@ app.get('/', function(req, res) {
     res.render('index', { r, r1, ap });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
