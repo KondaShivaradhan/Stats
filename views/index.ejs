@@ -137,12 +137,12 @@
                         </div>
                     </div>
                     <div style="padding: 30px; height:70%;position: relative;width: 100%;">
-                        <div style="display: flex; flex-direction: row;flex-wrap: wrap;justify-content: space-between; gap: 6%;height: 100%;">
+                        <div style="display: flex; flex-direction: row;flex-wrap: wrap;justify-content: space-between; gap: 6%;height: 90%;">
                             <% ap.children.forEach(element=> {%>
                                 <% element.stats.forEach(stat=> {%>
                                     <% if(stat.metadata.name=='Kills' ){%>
-                                        <% if(stat.value>=100){%>
-                                            <div id="opp" class="kills" style=" height: 150px;width: 150px;background: url('<%= element.metadata.icon%>');background-size: cover;background-repeat: no-repeat;border-radius: 20px;">
+                                        <% if(stat.value>=500){%>
+                                            <div id="opp" class="kills500" style=" height: 150px;width: 150px;background: url('<%= element.metadata.icon%>');background-size: cover;background-repeat: no-repeat;border-radius: 20px;">
                                                 <div id="stattop" style="height: 100%;width:100%;position: relative;top:50%;left:50%;transform: translate(-50%,-50%);">
 
                                                     <div id="stats">
@@ -268,7 +268,7 @@
                     </div>
                     <br>
                     <div style="padding: 30px; height:70%;position: relative;width: 100%;">
-                        <div style="display: flex; flex-direction: row-reverse;flex-wrap: wrap;justify-content: space-evenly; gap: 1%;height: 100%;">
+                        <div style="display: flex; flex-direction: row-reverse;flex-wrap: wrap;justify-content: space-evenly;gap: 1%;height:90%;">
                             <% r1.operators.forEach(element=> {%>
                                 <% if(element.kd>0 && !element.name.includes('Recruit')) {%>
                                     <!-- style="background: url('<%= element.badge_image%>');background-size: cover;background-repeat: no-repeat;" -->

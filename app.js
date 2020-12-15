@@ -11,25 +11,27 @@ const { response } = require('express');
 const { json } = require('body-parser');
 // const API_KEY = 'f582bd87-1ccb-4f27-ad72-61900e1408d6' // from https://battlefieldtracker.com/site-api
 
-r6.getGenericStats('BlazingBane', 'pc', 'all').then(userStats => {
-    rdata = userStats
-    global.r = rdata
-})
-r6.getOperatorStats('BlazingBane', 'pc').then(userStats => {
-    var rdata = userStats
-    global.r1 = rdata
-        // JSON.stringify
-})
-apex.user('BlazingBane', 'PC').then(data => {
-    console.log(data.data.children[0])
 
-    var aap = data.data
-    global.ap = aap
-});
 app.get('/', function(req, res) {
-    res.render('index', { r, r1, ap });
+    r6.getGenericStats('BlazingBane', 'pc', 'all').then(userStats => {
+        rdata = userStats
+        global.r = rdata
+    })
+    r6.getOperatorStats('BlazingBane', 'pc').then(userStats => {
+        var rdata = userStats
+        global.r1 = rdata
+            // JSON.stringify
+    })
+    apex.user('BlazingBane', 'PC').then(data => {
+        console.log(data.data.children[18])
+
+        var aap = data.data
+        global.ap = aap
+    });
+    if (typeof ap != 'undefined' && typeof r != 'undefined' && typeof r1 != 'undefined')
+        res.render('index', { r, r1, ap });
+    else {
+        res.send("refresh the site")
+    }
 });
 app.listen(process.env.PORT || 5000)
-    // app.listen(port, () => {
-    //     console.log(`Example app listening at http://localhost:${port}`)
-    // })

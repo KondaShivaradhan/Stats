@@ -190,7 +190,7 @@ td {
     background: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.315), rgba(246, 0, 0, 0.808));
 }
 
-@keyframes kills {
+@keyframes kills100 {
     from {
         box-shadow: 0px 0px 15px 7px rgba(255, 255, 255, 0.75);
     }
@@ -199,8 +199,21 @@ td {
     }
 }
 
+@keyframes kills500 {
+    from {
+        box-shadow: 0px 0px 15px 7px rgba(248, 246, 126, 0.75);
+    }
+    to {
+        box-shadow: 0px 0px 11px 7px rgba(248, 246, 126, 0.75);
+    }
+}
+
 .kills {
     animation: kills 1.5s infinite alternate-reverse;
+}
+
+.kills500 {
+    animation: kills500 1.5s infinite alternate-reverse;
 }
 
 #opp {
