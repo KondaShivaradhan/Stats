@@ -24,120 +24,123 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" </head>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <!-- Aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-
-    <body>
-        <nav>
-            <div style="height: 100%;">
-                <ul>
-                    <li>
-                        <a href="">
-                            <div class="dot"></div>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a href="#apexL">
-                            <div class="dot" id="apex"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#battle">
-                            <div class="dot" id="bf"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#R6C">
-                            <div class="dot" id="r6"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#Discord">
-                            <div class="dot" id="dis"></div>
-                        </a>
-                    </li>
-                    <li>
+<body>
+    <nav>
+        <div style="height: 100%;">
+            <ul>
+                <li>
+                    <a href="">
                         <div class="dot"></div>
-                    </li>
-                    <li>
-                        <div class="dot"></div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div id="card">
-            <div id="battle" name="battlefield">
-                <div class="con">
-                    <h3 id="Ghead">BATTLEFIELD</h3>
-                    <p>
-                        Stats for Battlefield 1
-                    </p>
-                </div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#apexL">
+                        <div class="dot" id="apex"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#battle">
+                        <div class="dot" id="bf"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#R6C">
+                        <div class="dot" id="r6"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Discord">
+                        <div class="dot" id="dis"></div>
+                    </a>
+                </li>
+                <li>
+                    <div class="dot"></div>
+                </li>
+                <li>
+                    <div class="dot"></div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="card">
+        <div id="battle" name="battlefield">
+            <div class="con">
+                <h3 id="Ghead">BATTLEFIELD</h3>
+                <p>
+                    Stats for Battlefield 1
+                </p>
             </div>
         </div>
-        <div id="card" name="apexlegends">
-            <div id="apexL">
-                <div class="con">
-                    <h3 id="Ghead">Apex Legends</h3>
-                    <div style="text-align: center;margin-top: 2%;">
-                        <div style="display: inline-block;background-color: rgba(255, 0, 0, 0);">
-                            <table>
-                                <tr style="background-color: rgba(255, 0, 0, 0);width: 100%;height: 70px;">
-                                    <td colspan='5'><span style="font-size: 25px;font-weight: 900;letter-spacing: 5px;text-shadow: 2px 2px 20px #f52e2e ">
+    </div>
+    <div id="card" name="apexlegends">
+        <div id="apexL">
+            <div class="con">
+                <h3 id="Ghead">Apex Legends</h3>
+                <div style="text-align: center;margin-top: 2%;">
+                    <div style="display: inline-block;background-color: rgba(255, 0, 0, 0);">
+                        <table>
+                            <tr style="background-color: rgba(255, 0, 0, 0);width: 100%;height: 70px;">
+                                <td colspan='5'><span style="font-size: 25px;font-weight: 900;letter-spacing: 5px;text-shadow: 2px 2px 20px #f52e2e ">
                                         <%= r.username%>
                                     </span></td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="3">
-                                        <img style="border-radius: 20px;max-width:100%;
+                            </tr>
+                            <tr>
+                                <td rowspan="3">
+                                    <img style="border-radius: 20px;max-width:100%;
                                         max-height:100%;" src="<%= ap.metadata.rankImage %>" alt="">
-                                    </td>
-                                </tr>
-                                <tr style=" font-family: 'Roboto', sans-serif;">
-                                    <td> <span style="font-size: 15px;font-weight: 900;letter-spacing: 2px;">Level</span>
+                                </td>
+                            </tr>
+                            <tr style=" font-family: 'Roboto', sans-serif;">
+                                <td> <span style="font-size: 15px;font-weight: 900;letter-spacing: 2px;">Level</span>
 
-                                    </td>
-                                    <td><span style="font-size: 15px;font-weight: 900;letter-spacing: 2px;">Damage</span>
-                                    </td>
-                                    <td> <span style="font-size: 15px;font-weight: 900;letter-spacing: 2px;">RP</span>
+                                </td>
+                                <td><span style="font-size: 15px;font-weight: 900;letter-spacing: 2px;">Damage</span>
+                                </td>
+                                <td> <span style="font-size: 15px;font-weight: 900;letter-spacing: 2px;">RP</span>
 
-                                    </td>
-                                    <td>
-                                        </span><span style="font-size: 15px;font-weight: 900;letter-spacing: 2px;">
+                                </td>
+                                <td>
+                                    </span><span style="font-size: 15px;font-weight: 900;letter-spacing: 2px;">
                                         Kills</span></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span style="font-size: 30px;color: rgb(255, 255, 255);">
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span style="font-size: 30px;color: rgb(255, 255, 255);">
                                         <%= ap.metadata.level %>
                                     </span>
-                                    </td>
-                                    <td>
-                                        <span style="font-size: 30px;color: white;">
+                                </td>
+                                <td>
+                                    <span style="font-size: 30px;color: white;">
                                         <%= ap.stats[2].value %>
                                     </span>
-                                    </td>
-                                    <td><span style="font-size: 30px;color: white;">
+                                </td>
+                                <td><span style="font-size: 30px;color: white;">
                                         <%= ap.stats[9].value %>
                                 </td>
                                 <td> <span style="font-size: 30px;color: white;">
                                         <%= ap.stats[1].value %>
                                     </span></td>
-                                </tr>
-                            </table>
-                        </div>
+                            </tr>
+                        </table>
                     </div>
-                    <div style="padding: 30px; height:70%;position: relative;width: 100%;">
-                        <div style="display: flex; flex-direction: row;flex-wrap: wrap;justify-content: space-between; gap: 6%;height: 90%;">
+                </div>
+                <div style="padding: 30px; height:70%;position: relative;width: 100%;">
+                    <div style="display: flex; flex-direction: row;flex-wrap: wrap;justify-content: space-between; gap: 6%;height: 90%;">
+
+                        <div style="display: flex; flex-direction: row;flex-wrap: wrap;justify-content: space-between; gap: 5%;height: 100%;">
+
                             <% ap.children.forEach(element=> {%>
                                 <% element.stats.forEach(stat=> {%>
                                     <% if(stat.metadata.name=='Kills' ){%>
@@ -308,6 +311,6 @@
             </div>
 
         </div>
-    </body>
+</body>
 
 </html>
